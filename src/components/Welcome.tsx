@@ -70,7 +70,6 @@ const Welcome = ({ setSelected, movieList, setMovieList }: Props) => {
             className="movie-select block bg-yellow-500 text-xl py-2 px-5 w-full mt-1 rounded-md  border-transparent focus:bg-yellow-600 focus:ring-0 focus:outline-none transition duration-300 ease-in-out form-select cursor-pointer outline-none focus:border-none "
             defaultValue={""}
             onChange={(event) => {
-              // setSelected(event.target.value);
               const movie = JSON.parse(event.target.value);
               setSelected(movie);
             }}
