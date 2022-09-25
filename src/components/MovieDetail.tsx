@@ -62,7 +62,7 @@ const MovieDetail = ({ selected, setSelected }: Props) => {
           className="text-yellow-500 text-5xl font-bold"
           initial={{ x: -1000 }}
           animate={{ x: 0 }}
-          transition={{ duration: 0.5, type: "spring", stiffness: 200 }}
+          transition={{ duration: 0.5, type: "spring", stiffness: 70 }}
         >
           {selected?.title}
         </motion.h1>
