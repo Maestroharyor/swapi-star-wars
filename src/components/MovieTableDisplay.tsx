@@ -71,14 +71,6 @@ const MovieTableDisplay = ({ characters }: Props) => {
     )
     .reduce((prev, next) => prev + next);
 
-  console.log(
-    characterData
-      .filter((character) => typeof Number(character.height) === "number")
-      .map((character) =>
-        Number(character.height) != NaN ? Number(character.height) : 0
-      )
-  );
-
   return (
     <div className="w-full overflow-x-auto">
       <div>

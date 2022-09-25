@@ -2,6 +2,7 @@ import React, { useLayoutEffect, useState } from "react";
 
 // Components
 import { motion } from "framer-motion";
+import { TypeAnimation } from "react-type-animation";
 import { Tooltip, message } from "antd";
 import MovieTableDisplay from "./MovieTableDisplay";
 import { FaSync } from "react-icons/fa";
@@ -47,7 +48,7 @@ const MovieDetail = ({ selected, setSelected }: Props) => {
     }
   }, []);
   return (
-    <div className=" h-full flex flex-col gap-20 items-start justify-start py-20 px-5 max-w-[900px] mx-auto relative">
+    <div className=" h-full flex flex-col gap-10 items-start justify-start py-20 px-5 max-w-[900px] mx-auto relative">
       <div>
         <motion.p
           className="bg-black text-yellow-500 px-8 py-2 rounded border border-white w-fit text-xl mb-5"
@@ -65,6 +66,17 @@ const MovieDetail = ({ selected, setSelected }: Props) => {
         >
           {selected?.title}
         </motion.h1>
+      </div>
+      <div
+        className="text-yellow-500 text-xl sm:text-2xl md:text-3xl  leading mb-10"
+        style={{ lineHeight: "50px" }}
+      >
+        <TypeAnimation
+          sequence={[selected?.opening_crawl!]}
+          speed={75} // Must be in range between 1 and 99!
+          wrapper="div"
+          repeat={0}
+        />
       </div>
       <motion.div
         initial={{ opacity: 0, scale: 0 }}
